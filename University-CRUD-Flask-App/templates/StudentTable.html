@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+</head>
+<body class="bg-light">
+
+    <div  class="container mt-3 p-3">
+      
+      <h2 class="text-center mb-2 ">All Students </h2>
+
+      <form action="/SearchStudentWithName" method="get" class="d-flex m-auto mb-3 justify-content-center gap-2">
+          <input type="search" name="searchName" placeholder="Search with name" class="form-control w-50 " required>
+          <button type="submit" class="btn btn-success">Search</button>
+      </form> 
+
+      <h2 class="text-center mb-2 ">Search Top Students </h2>
+
+      <form action="/TopStudentsWithGrade" method="get" class="d-flex m-auto mb-3 justify-content-center gap-2">
+        
+        <div >
+          <select class="form-select" id="levelId" name="level_id" required>
+            <option value="" disabled selected>Select Level</option>
+            {% for level in levels %}
+            <option value="{{ level[0] }}">{{ level[1] }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div >
+          <select class="form-select" id="courseId" name="course_id" required>
+            <option value="" disabled selected>Select Cousre</option>
+            {% for course in courses %}
+            <option value="{{ course[0] }}">{{ course[1] }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div >
+          <select class="form-select" id="gradeId" name="grade" required>
+            <option value="" disabled selected>Select Grade</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+ 
+        <button type="submit" class="btn btn-success">Search</button>
+    </form> 
+
+      <a href="{{ url_for('show_add_student_form') }}" class="btn btn-success"> + Add new student</a>
+      <br><br>
+
+      <div class="table-responsive  rounded shadow p-4">      
+        <table class="table  table-bordered border-success-subtle table-hover">
+          <thead >
+            <tr class="table-success">
+              <th >Id</th>
+              <th >Name</th>
+              <th >Address</th>
+              <th >Gender</th>
+              <th >Date of Birth</th>
+              <th >Phone</th>
+              <th >Email</th>
+              <th >Department Id</th>
+              <th >Level Id</th>
+              <th >Schoraship Id</th>
+              <th >Update</th>
+              <th >Delete</th>
+            </tr>
+          </thead>
+
+          <tbody class="p-5">
+            {% for student in students %}
+            <tr>
+                <td>{{ student[0] }}</td>
+                <td>{{ student[1] }}</td>
+                <td>{{ student[2] }}</td>
+                <td>{{ student[3] }}</td>
+                <td>{{ student[4] }}</td>
+                <td>{{ student[5] }}</td>
+                <td>{{ student[6] }}</td>
+                <td>{{ student[7] }}</td>
+                <td>{{ student[8] }}</td>
+                <td>{{ student[9] }}</td>
+                <td><a href="{{ url_for('show_edit_student_form', student_id=student[0]) }}" class="btn btn-warning">Edit</a></td>                
+                <td><a href="{{ url_for('delete_student', student_id=student[0]) }}" class="btn btn-danger">Delete</a></td>                
+            </tr>
+            {% endfor %}
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+  </html>

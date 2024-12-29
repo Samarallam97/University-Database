@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Database Tables</h1>
+      <div class="row justify-content-center g-2">
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Employee Table</h5>
+              <p class="card-text">View and manage employee records.</p>
+              <a href="" class="btn btn-warning w-100">Go to Employee Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Department Table</h5>
+              <p class="card-text">View and manage department records.</p>
+              <a href="" class="btn btn-info w-100">Go to Department Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Student Table</h5>
+              <p class="card-text">View and manage student records.</p>
+              <a href="{{ url_for('student_table') }}" class="btn btn-success w-100">Go to Student Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Professor Table</h5>
+              <p class="card-text">View and manage professor records.</p>
+              <a href="" class="btn btn-primary w-100">Go to Professor Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Course Table</h5>
+              <p class="card-text">View and manage course records.</p>
+              <a href="" class="btn btn-danger w-100">Go to Course Table</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Exam Table</h5>
+              <p class="card-text">View and manage exam records.</p>
+              <a href="" class="btn btn-secondary w-100">Go to Exam Table</a>
+            </div>
+          </div>
+        </div>
+
+                
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Book Table</h5>
+              <p class="card-text">View and manage book records.</p>
+              <a href="" class="btn btn-warning w-100">Go to Book Table</a>
+            </div>
+          </div>
+        </div>
+
+                
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Places Table</h5>
+              <p class="card-text">View and manage Places records.</p>
+              <a href="" class="btn btn-info w-100">Go to Places Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Lectures Table</h5>
+              <p class="card-text">View and manage lectures records.</p>
+              <a href="" class="btn btn-success w-100">Go to Lectures Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Devices Table</h5>
+              <p class="card-text">View and manage devices records.</p>
+              <a href="" class="btn btn-primary w-100">Go to Devices Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Schoraship Table</h5>
+              <p class="card-text">View and manage schoraship records.</p>
+              <a href="" class="btn btn-danger w-100">Go to Schoraship Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Courses_Professors Table</h5>
+              <p class="card-text">View and manage Courses_Professors records.</p>
+              <a href="" class="btn btn-secondary w-100">Go to Courses_Professors Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Students_Schoraships Table</h5>
+              <p class="card-text">View and manage Students_Schoraships records.</p>
+              <a href="" class="btn btn-warning w-100">Go to Students_Schoraships Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Students_Courses Table</h5>
+              <p class="card-text">View and manage Students_Courses records.</p>
+              <a href="" class="btn btn-info w-100">Go to Students_Courses Table</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Courses_Prerequisites Table</h5>
+              <p class="card-text">View and manage Courses_Prerequisites records.</p>
+              <a href="" class="btn btn-success w-100">Go to Courses_Prerequisites Table</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h5 class="card-title">Students_Exams Table</h5>
+              <p class="card-text">View and manage Students_Exams records.</p>
+              <a href="" class="btn btn-danger w-100">Go to Students_Exams Table</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
